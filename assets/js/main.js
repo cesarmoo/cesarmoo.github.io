@@ -5,6 +5,30 @@
 */
 
 (function($) {
+	// Custom JS
+
+	// banner typing
+	var banner_typing_options = {
+	  strings: ["Hi, I'm Cesar!"],
+	  typeSpeed: 40,
+	  showCursor: true,
+	  startDelay: 500,
+	  onComplete: (self) => {
+	  	$(".typed-cursor").css("color", "black");
+	  	var banner_typing_options = {
+			  strings: ["^300I love space, software, and design."],
+			  typeSpeed: 40,
+			  showCursor: true,
+			};
+			var typed2 = new Typed('#typing2', banner_typing_options);
+		  }
+		};
+	var typed = new Typed('#typing', banner_typing_options);
+
+	
+
+
+
 
 	skel.breakpoints({
 		xlarge: '(max-width: 1680px)',

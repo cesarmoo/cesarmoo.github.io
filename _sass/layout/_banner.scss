@@ -6,8 +6,47 @@
 
 /* Banner */
 
+// Custom
+	.text-no-select {
+		user-drag: none; 
+	  user-select: none;
+	  -moz-user-select: none;
+	  -webkit-user-drag: none;
+	  -webkit-user-select: none;
+	  -ms-user-select: none;
+	}
+
+	#banner-div {
+		height: 10em;
+		margin-top: 20%;
+		color: white;
+		font-weight: lighter;
+	}
+
+	.banner-text {
+		font-size: 3.25em;
+		line-height: 1em;
+	}
+
+	.typed-cursor {
+		font-size: 3em;
+		vertical-align: 9%;
+		color: _palette(coolblue);
+	}
+
+	#intro-pic {
+		content: url("../images/headshot.jpg");
+		height: 150px;
+		width: auto;
+		box-sizing: border-box;
+		border-radius: 50%;
+		overflow: hidden;
+	}
+
+
+
 	#banner {
-		@include vendor('align-items', 'center');
+		//@include vendor('align-items', 'center');
 		@include vendor('background-image', 'url("../images/banner.jpg")');
 		@include vendor('display', 'flex');
 		@include padding(4em, 0, (2em, 0, 0, 0));
@@ -17,9 +56,9 @@
 		background-size: cover;
 		border-bottom: 0 !important;
 		cursor: default;
-		height: 60vh;
+		height: 100vh;
 		margin-bottom: -3.25em;
-		max-height: 32em;
+		// max-height: 32em;
 		min-height: 22em;
 		position: relative;
 		top: -3.25em;
@@ -28,7 +67,7 @@
 			@include vendor('transition', 'opacity #{_duration(banner)} ease');
 			@include vendor('transition-delay', '0.75s');
 			@include vendor('pointer-events', 'none');
-			background-color: _palette(bg);
+			//background-color: _palette(banner-color);
 			content: '';
 			display: block;
 			height: 100%;
@@ -46,7 +85,7 @@
 
 		> .inner {
 			@include vendor('transition', (
-				'opacity 1.5s ease',
+				'opacity 0.5s ease',
 				'transform 0.5s ease-out',
 				'filter 0.5s ease',
 				'-webkit-filter 0.5s ease'
@@ -95,9 +134,9 @@
 		}
 
 		&.major {
-			height: 75vh;
+			height: 100vh;
 			min-height: 30em;
-			max-height: 50em;
+			// max-height: 50em;
 
 			&.alt {
 				  opacity: 0.75;
@@ -151,7 +190,7 @@
 			}
 
 			&.major {
-				height: auto;
+				height: 100vh;
 				min-height: 0;
 				max-height: none;
 			}
