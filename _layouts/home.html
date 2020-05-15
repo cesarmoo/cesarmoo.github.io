@@ -27,27 +27,53 @@
                     </header>
                 </div>
             </div>
+            <div id="down-caret" class="row">
+                <div class="col text-center">
+                    <span class="fas fa-chevron-down"></span>
+                </div>
+            </div>
         </div>
     </section>
-
-    <!-- TODO: add down caret, remove menu button, add next sections -->
 
     <!-- Main -->
     <div id="main">
 
         <!-- One -->
-        {% include tiles.html %}
+        <!-- {% include tiles.html %} -->
 
-        <!-- Two -->
-        <section id="two">
+        <!-- About Me -->
+        <section id="about-me" class="py-5">
             <div class="inner">
-                <header class="major">
-                    <h2>Massa libero</h2>
-                </header>
-                <p>{{ content }}</p>
-                <ul class="actions">
-                    <li><a href="landing.html" class="button next">Get Started</a></li>
-                </ul>
+                <div class="button-no-click text-no-select">
+                    About Me
+                </div>
+                <p class="mt-5">
+                    Hey! I'm Cesar, an engineering student at the University of Michigan studying computer science and space science.
+                </p>
+                <p class="mb-5">
+                    My goal is to intersect software and design to make space exploration more efficient, safe, and frequent. I want to create technologies that bring us closer to the stars and elevate us to become a multiplanetary species.
+                </p>
+            </div>
+        </section>
+
+        <!-- TODO: 
+        - add next sections
+    -->
+
+        <!-- Resume -->
+        <section id="resume" " class="py-5">
+            <div class="inner">
+                <div class="button-no-click black text-no-select">
+                    Resume
+                </div>
+                <div class="row">
+                    <div class="col">
+
+                    </div>
+                    <div class="col">
+
+                    </div>
+                </div>
             </div>
         </section>
 

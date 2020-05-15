@@ -6,6 +6,25 @@
 
 /* Section/Article */
 
+// Custom CSS
+
+	#about-me {
+		background-color: _palette(darkcoolblue);
+	}
+	#about-me p {
+		color: white;
+		font-size: 2em;
+		font-weight: lighter;
+		line-height: 1.3em;
+	}
+
+	#resume {
+		background-color: _palette(gray);
+		color: black;
+	}
+
+// Original CSS
+
 	section, article {
 		&.special {
 			text-align: center;

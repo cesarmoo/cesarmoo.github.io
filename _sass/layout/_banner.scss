@@ -6,19 +6,21 @@
 
 /* Banner */
 
-// Custom
+// Custom CSS
 	.text-no-select {
 		user-drag: none; 
-	  user-select: none;
-	  -moz-user-select: none;
-	  -webkit-user-drag: none;
-	  -webkit-user-select: none;
-	  -ms-user-select: none;
+		user-select: none;
+		-moz-user-select: none;
+		-webkit-user-drag: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
 	}
 
 	#banner-div {
 		height: 10em;
-		margin-top: 20%;
+		position: absolute;
+		top: 50%;
+		margin-top: -6.5em;
 		color: white;
 		font-weight: lighter;
 	}
@@ -36,6 +38,7 @@
 
 	#intro-pic {
 		content: url("../images/headshot.jpg");
+		margin-top: 3px;
 		height: 150px;
 		width: auto;
 		box-sizing: border-box;
@@ -43,7 +46,42 @@
 		overflow: hidden;
 	}
 
+	// for bouncing down caret
+	@keyframes float {
+		0% {
+			transform: translatey(0px);
+		}
+		50% {
+			transform: translatey(10px);
+		}
+		100% {
+			transform: translatey(0px);
+		}
+	}
+	#down-caret {
+		color: white;
+		font-size: 3em;
+		position: absolute;
+		width: 100px;
+		left: 50%;
+		margin-left: -50px;
+		bottom: 0;
+		display: none; // will fade in after typing animation
+		transform: translatey(0px);
+		animation: float 1.5s ease-in-out 2;
+	}
+	#down-caret .fa-chevron-down {
+		color: white;
+	}
+	#down-caret .fa-chevron-down:hover {
+		color: _palette(coolblue);
+		cursor: pointer;
+		transition-duration: 0.1s;
+	}
 
+
+
+// Original CSS
 
 	#banner {
 		//@include vendor('align-items', 'center');

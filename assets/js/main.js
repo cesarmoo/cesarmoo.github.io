@@ -8,6 +8,7 @@
 	// Custom JS
 
 	// banner typing
+	// handles the typing text and showing the down caret
 	var banner_typing_options = {
 	  strings: ["Hi, I'm Cesar!"],
 	  typeSpeed: 40,
@@ -19,16 +20,28 @@
 			  strings: ["^300I love space, software, and design."],
 			  typeSpeed: 40,
 			  showCursor: true,
+			  onComplete: (self) => {
+			  	$("#down-caret").delay(500).fadeIn(500);
+			  }
 			};
 			var typed2 = new Typed('#typing2', banner_typing_options);
 		  }
 		};
 	var typed = new Typed('#typing', banner_typing_options);
 
+	// handles clicking on down caret to scroll down
+	var $caret = $("#down-caret .fa-chevron-down");
+	var $scrollTo = $("#main");
+	$caret.click(function() {
+    $('html, body').animate({
+      scrollTop: $scrollTo.offset().top
+    }, 650, "swing");
+	});
+
 	
 
 
-
+	// Original JS
 
 	skel.breakpoints({
 		xlarge: '(max-width: 1680px)',
