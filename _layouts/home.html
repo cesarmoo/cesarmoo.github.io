@@ -9,7 +9,6 @@
 {% include head.html %}
 
 <body>
-
     {% include header.html %}
 
     <!-- Banner -->
@@ -35,7 +34,7 @@
         </div>
     </section>
 
-    <!-- Main -->
+    <!-- Sections -->
     <div id="main">
 
         <!-- One -->
@@ -45,7 +44,7 @@
         <section id="about-me" class="py-5">
             <div class="inner">
                 <div class="button-no-click text-no-select">
-                    About Me
+                    A little About Me
                 </div>
                 <p class="mt-5">
                     Hey! I'm Cesar, an engineering student at the University of Michigan studying computer science and space science.
@@ -56,28 +55,83 @@
             </div>
         </section>
 
-        <!-- TODO: 
-        - add next sections
-    -->
-
         <!-- Resume -->
         <section id="resume" " class="py-5">
             <div class="inner">
                 <div class="button-no-click black text-no-select">
-                    Resume
+                    Some more details
                 </div>
-                <div class="row">
-                    <div class="col">
+                <div class="row my-5">
+                    <!-- Education -->
+                    <div class="col-12 col-lg-6"> 
+                        <div class="container m-0 p-0">
+                            <!-- Icon -->
+                            <div class="row icon-row">
+                                <div class="col">
+                                    <span class="fas fa-graduation-cap"></span>
+                                    <span class="col-title ml-2">Education</span>
+                                </div>
+                            </div>
 
+                            <!-- U-M -->
+                            <div class="row mt-5">
+                                <div class="col-auto">
+                                    <span class="entry-title">University of Michigan - Ann Arbor</span>
+                                </div>
+                                <div class="col-auto">
+                                    <span class="entry-year">2018-2022</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col mt-2">
+                                    <span class="entry-content">
+                                        B.S.E. in Computer Science with Minor in Space Science.
+                                        <br>
+                                        Also planning on pursuing an accelerated Master's in Computer Science.
+                                    </span>
+                                </div>
+                            </div>
+
+
+                        </div>
                     </div>
-                    <div class="col">
+                    <!-- Work experience -->
+                    <div class="col-12 col-lg-6 mt-5 mt-lg-0">
+                        <div class="container m-0 p-0">
+                            <!-- Icon -->
+                            <div class="row icon-row">
+                                <div class="col">
+                                    <span class="fas fa-code"></span>
+                                    <span class="col-title ml-2">Experience</span>
+                                </div>
+                            </div>
 
+                            <!-- Maxar -->
+                            <div class="row mt-5">
+                                <div class="col-auto">
+                                    <span class="entry-title">Maxar Technologies</span>
+                                </div>
+                                <div class="col-auto">
+                                    <span class="entry-year">2020-Present</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col mt-2">
+                                    <span class="entry-content">
+                                        Software Engineer Intern.
+                                        <br>
+                                        This will be my first internship in the space industry! Super excited.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
     </div>
+    <!-- end Sections -->
 
     {% include footer.html %}
 

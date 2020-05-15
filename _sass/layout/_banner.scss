@@ -68,7 +68,7 @@
 		bottom: 0;
 		display: none; // will fade in after typing animation
 		transform: translatey(0px);
-		animation: float 1.5s ease-in-out 2;
+		animation: float 1s ease-in-out 2;
 	}
 	#down-caret .fa-chevron-down {
 		color: white;
@@ -97,25 +97,25 @@
 		height: 100vh;
 		margin-bottom: -3.25em;
 		// max-height: 32em;
-		min-height: 22em;
+		// min-height: 22em;
 		position: relative;
 		top: -3.25em;
 
-		&:after {
-			@include vendor('transition', 'opacity #{_duration(banner)} ease');
-			@include vendor('transition-delay', '0.75s');
-			@include vendor('pointer-events', 'none');
+		//&:after {
+			//@include vendor('transition', 'opacity #{_duration(banner)} ease');
+			//@include vendor('transition-delay', '0.75s');
+			//@include vendor('pointer-events', 'none');
 			//background-color: _palette(banner-color);
-			content: '';
-			display: block;
-			height: 100%;
-			left: 0;
-			opacity: 0.85;
-			position: absolute;
-			top: 0;
-			width: 100%;
-			z-index: 1;
-		}
+			//content: '';
+			//display: block;
+			//height: 100%;
+			//left: 0;
+			//opacity: 0.85;
+			//position: absolute;
+			//top: 0;
+			//width: 100%;
+			//z-index: 1;
+		//}
 
 		h1 {
 			font-size: 3.25em;

@@ -21,7 +21,7 @@
 			  typeSpeed: 40,
 			  showCursor: true,
 			  onComplete: (self) => {
-			  	$("#down-caret").delay(500).fadeIn(500);
+			  	$("#down-caret").delay(200).fadeIn(500);
 			  }
 			};
 			var typed2 = new Typed('#typing2', banner_typing_options);

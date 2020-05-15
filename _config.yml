@@ -5,7 +5,7 @@ subtitle:
 email: 
 description:
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://cesarmoo.github.io/" # the base hostname & protocol for your site
+# url: "https://cesarmoo.github.io/" # the base hostname & protocol for your site
 author:
 street_address:
 city: 
