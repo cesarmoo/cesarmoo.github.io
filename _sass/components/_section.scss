@@ -48,14 +48,38 @@
 	#resume .entry-year {
 		font-size: 1em;
 		font-style: italic;
-		vertical-align: -34%;
+		vertical-align: -30%;
 		font-weight: lighter;
 	}
 
 	#resume .entry-content {
 		font-size: 1.15em;
 		font-weight: lighter;
-		line-height: 1.5em;
+		line-height: 1.6em;
+	}
+
+	#resume b {
+		color: initial;
+		font-weight: normal;
+	}
+
+	#projects {
+		background-color: _palette(midnightblue);
+		color: white;
+	}
+
+	#projects .image-row {
+	}
+
+	#projects .project-pic {
+		width: 100%;
+		height: 300px;
+		overflow: hidden;
+	}
+
+	#projects .project-pic img {
+		width: 100%;
+		height: auto;
 	}
 
 

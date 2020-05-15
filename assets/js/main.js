@@ -38,7 +38,6 @@
     }, 650, "swing");
 	});
 
-	
 
 
 	// Original JS
