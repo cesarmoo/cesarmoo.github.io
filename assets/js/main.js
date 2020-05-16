@@ -38,15 +38,42 @@
     }, 650, "swing");
 	});
 
-	// handle project title sliding down on image hover
-	$("#projects .project-pic").hover(
+
+	// handle project title showing on image hover
+	var $proj_pic = $("#projects .project-pic");
+	$proj_pic.hover(
 		function() {
-			$(this).find(".project-title").stop().slideDown(200);
+			$(this).find(".project-title").stop().fadeIn(150);
 		},
 		function() {
-			$(this).find(".project-title").stop().slideUp(200);
+			$(this).find(".project-title").stop().fadeOut(150);
 		}
 	);
+
+	// handling displaying project description on click
+	var showing_images = true;
+	var $active_desc;
+	var $desc_row = $("#projects .description-row");
+	var $image_row = $("#projects .image-row");
+	$proj_pic.click(function() {
+		if (showing_images) {
+			showing_images = false;
+			var project_id = $(this).attr("project");
+			$image_row.stop().fadeOut(150);
+			$desc_row.stop().fadeIn(150);
+			$active_desc = $desc_row.children(".project-desc[project='" + project_id + "']");
+			$active_desc.toggle();
+		}
+	});
+	$("#projects #project-back").click(function() {
+		if (!showing_images) {
+			$active_desc.toggle();
+			$active_desc = null;
+			$desc_row.stop().fadeOut(150);
+			$image_row.stop().fadeIn(150);
+			showing_images = true;
+		}
+	});
 
 
 	// Original JS
