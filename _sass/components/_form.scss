@@ -80,7 +80,7 @@
 		background: _palette(border-bg);
 		border: none;
 		border-radius: 0;
-		color: inherit;
+		color: white;
 		display: block;
 		outline: 0;
 		padding: 0 1em;
@@ -92,8 +92,8 @@
 		}
 
 		&:focus {
-			border-color: _palette(highlight);
-			box-shadow: 0 0 0 2px _palette(highlight);
+			//border-color: _palette(coolblue);
+			box-shadow: 0 0 0 2px _palette(coolblue);
 		}
 	}
 

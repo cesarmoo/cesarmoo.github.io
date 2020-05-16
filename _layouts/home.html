@@ -78,7 +78,7 @@
                                 <div class="col-auto">
                                     <span class="entry-title">University of Michigan - Ann Arbor</span>
                                 </div>
-                                <div class="col-auto">
+                                <div class="col-12 col-sm-auto">
                                     <span class="entry-year">2018-2022</span>
                                 </div>
                             </div>
@@ -99,7 +99,7 @@
                                 <div class="col-auto">
                                     <span class="entry-title">Stuyvesant High School</span>
                                 </div>
-                                <div class="col-auto">
+                                <div class="col-12 col-sm-auto">
                                     <span class="entry-year">2014-2018</span>
                                 </div>
                             </div>
@@ -107,7 +107,7 @@
                     </div>
                     <!-- Work experience -->
                     <div class="col-12 col-lg-6 mt-5 mt-lg-0">
-                        <div class="container m-0 p-0 ml-4">
+                        <div class="container m-0 p-0 ml-lg-4">
                             <!-- Icon -->
                             <div class="row icon-row">
                                 <div class="col">
@@ -121,7 +121,7 @@
                                 <div class="col-auto">
                                     <span class="entry-title">Maxar Technologies</span>
                                 </div>
-                                <div class="col-auto">
+                                <div class="col-12 col-sm-auto">
                                     <span class="entry-year">2020</span>
                                 </div>
                             </div>
@@ -140,7 +140,7 @@
                                 <div class="col-auto">
                                     <span class="entry-title">Rescuing Leftover Cuisine</span>
                                 </div>
-                                <div class="col-auto">
+                                <div class="col-12 col-sm-auto">
                                     <span class="entry-year">2017</span>
                                 </div>
                             </div>
@@ -159,7 +159,7 @@
                                 <div class="col-auto">
                                     <span class="entry-title">Hearts and Minds</span>
                                 </div>
-                                <div class="col-auto">
+                                <div class="col-12 col-sm-auto">
                                     <span class="entry-year">2017</span>
                                 </div>
                             </div>
@@ -181,21 +181,68 @@
         <!-- Projects -->
         <section id="projects" class="py-5">
             <div class="inner">
-                <div class="button-no-click text-no-select">
-                    Things I've worked on
+                <div class="button-no-click black text-no-select">
+                    Check out my projects
                 </div>
-                <div class="row my-5 image-row">
+                <div class="row mt-5 image-row">
                     <!-- CLAWS -->
-                    <div class="col-4">
-                        <div class="project-pic text-no-select">
-                            <img src="/assets/images/claws-title.jpg" class="text-no-select">
-                        </div>
+                    <div class="col-6 col-lg-4">
+                        <div id="claws-img" class="project-pic text-no-select"></div>
                     </div>
 
                     <!-- Reggie -->
-                    <div class="col-4">
-                        <div class="project-pic text-no-select">
-                            <img src="/assets/images/reggie-title.jpg" class="text-no-select">
+                    <div class="col-6 col-lg-4">
+                        <div id="reggie-img" class="project-pic text-no-select"></div>
+                    </div>
+
+                    <!-- MRover -->
+                    <div class="col-6 col-lg-4">
+                        <div id="mrover-img" class="project-pic text-no-select"></div>
+                    </div>
+                </div>
+                <div class="row mt-4 image-row">
+                    <!-- ENGR -->
+                    <div class="col-6 col-lg-4">
+                        <div id="balloon-img" class="project-pic text-no-select"></div>
+                    </div>
+
+                    <!-- Pickupbox -->
+                    <div class="col-6 col-lg-4">
+                        <div id="box-img" class="project-pic text-no-select"></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact form -->
+        <section id="contactform" class="py-5">
+            <div class="inner">
+                <div class="button-no-click text-no-select">
+                    Say hi
+                </div>
+                <div class="container p-0 my-5">
+                    <div class="row">
+                        <div class="col-10">
+                            <form action="https://formspree.io/{{ site.email }}" method="POST">
+                                <div class="field half first">
+                                    <label for="name">Name</label>
+                                    <input type="text" name="name" id="name" />
+                                </div>
+                                <div class="field half">
+                                    <label for="email">Email</label>
+                                    <input type="text" name="_replyto" id="email" />
+                                </div>
+                                <div class="field">
+                                    <label for="message">Message</label>
+                                    <textarea name="message" id="message" rows="6"></textarea>
+                                </div>
+                                <ul class="actions">
+                                    <li><input type="submit" value="Send" class="special" /></li>
+                                </ul>
+                            </form>
+                        </div>
+                        <div id="contact-right" class="col-auto">
                         </div>
                     </div>
                 </div>

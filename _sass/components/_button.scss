@@ -65,14 +65,14 @@
 		white-space: nowrap;
 
 		&:hover, &:active {
-			box-shadow: inset 0 0 0 2px _palette(highlight);
-			color: _palette(highlight);
+			box-shadow: inset 0 0 0 2px _palette(coolblue);
+			color: _palette(coolblue);
 		}
 
 		&:active {
-			background-color: transparentize(_palette(highlight), 0.9);
-			box-shadow: inset 0 0 0 2px desaturate(darken(_palette(highlight), 15), 5);
-			color: desaturate(darken(_palette(highlight), 15), 5);
+			background-color: transparentize(_palette(coolblue), 0.9);
+			box-shadow: inset 0 0 0 2px desaturate(darken(_palette(coolblue), 15), 5);
+			color: desaturate(darken(_palette(coolblue), 15), 5);
 		}
 
 		&.icon {
@@ -140,15 +140,15 @@
 		&.special {
 			background-color: _palette(fg-bold);
 			box-shadow: none;
-			color: _palette(bg);
+			color: _palette(midnightblue);
 
 			&:hover, &:active {
-				background-color: _palette(highlight);
-				color: _palette(bg) !important;
+				background-color: _palette(darkcoolblue);
+				color: white !important;
 			}
 
 			&:active {
-				background-color: desaturate(darken(_palette(highlight), 15), 5);
+				background-color: desaturate(darken(_palette(darkcoolblue), 15), 5);
 			}
 		}
 

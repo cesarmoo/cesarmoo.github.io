@@ -48,7 +48,7 @@
 	#resume .entry-year {
 		font-size: 1em;
 		font-style: italic;
-		vertical-align: -30%;
+		vertical-align: -33%;
 		font-weight: lighter;
 	}
 
@@ -64,8 +64,7 @@
 	}
 
 	#projects {
-		background-color: _palette(midnightblue);
-		color: white;
+		background-color: white;
 	}
 
 	#projects .image-row {
@@ -73,14 +72,63 @@
 
 	#projects .project-pic {
 		width: 100%;
-		height: 300px;
+		height: 270px;
 		overflow: hidden;
 	}
 
-	#projects .project-pic img {
-		width: 100%;
-		height: auto;
+	#projects .project-pic:hover {
+		filter: brightness(0.3);
+		transition-duration: 0.15s;
+		cursor: pointer;
 	}
+
+	#projects #claws-img {
+		overflow: hidden;
+		background-size: cover;
+		background-position: center;
+		background-image: url("/assets/images/claws-title.jpg");
+	}
+
+	#projects #reggie-img {
+		overflow: hidden;
+		background-size: cover;
+		background-position: center;
+		background-image: url("/assets/images/reggie-title.jpg");
+	}
+
+	#projects #mrover-img {
+		overflow: hidden;
+		background-size: cover;
+		background-position: center;
+		background-image: url("/assets/images/mrover-title.jpg");
+	}
+
+	#projects #balloon-img {
+		overflow: hidden;
+		background-size: cover;
+		background-position: center;
+		background-image: url("/assets/images/balloon-title.jpg");
+	}
+
+	#projects #box-img {
+		overflow: hidden;
+		background-size: cover;
+		background-position: center;
+		background-image: url("/assets/images/box-title.jpg");
+	}
+
+	#contactform {
+		background-color: _palette(midnightblue);
+		color: white;
+	}
+
+	#contactform #contact-right {
+		//border-left: 1px solid _palette(darkcoolblue);
+	}
+
+
+
+	 
 
 
 // Original CSS
