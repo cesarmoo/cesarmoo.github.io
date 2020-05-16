@@ -8,6 +8,8 @@
 
 // Custom CSS
 
+	// ABOUT ME
+
 	#about-me {
 		background-color: _palette(darkcoolblue);
 	}
@@ -17,6 +19,8 @@
 		font-weight: lighter;
 		line-height: 1.3em;
 	}
+
+	// RESUME
 
 	#resume {
 		background-color: _palette(gray);
@@ -63,17 +67,18 @@
 		font-weight: normal;
 	}
 
+	// PROJECTS
+
 	#projects {
 		background-color: white;
-	}
-
-	#projects .image-row {
 	}
 
 	#projects .project-pic {
 		width: 100%;
 		height: 270px;
 		overflow: hidden;
+		position: relative;
+		text-align: center;
 
 		@include breakpoint(medium) {
 			height: 250px;
@@ -88,46 +93,33 @@
 		}
 	}
 
+	#projects .project-pic .project-title {
+		width: 100%;
+		height: 100%;
+		line-height: 270px;
+		text-align: center;
+		position: absolute;
+		top: 0;
+		left: 0;
+		color: white;
+		font-size: 3em;
+		font-weight: lighter;
+		background-color: rgba(0,0,0,0.8);
+		display: none;
+	}
+
+	#projects .project-pic .project-title span {
+		display: inline-block;
+		vertical-align: middle;
+		line-height: normal;
+	}
+
 	#projects .project-pic:hover {
-		filter: brightness(0.3);
-		transition-duration: 0.15s;
 		cursor: pointer;
 	}
 
-	#projects #claws-img {
-		overflow: hidden;
-		background-size: cover;
-		background-position: center;
-		background-image: url("/assets/images/claws-title.jpg");
-	}
 
-	#projects #reggie-img {
-		overflow: hidden;
-		background-size: cover;
-		background-position: center;
-		background-image: url("/assets/images/reggie-title.jpg");
-	}
-
-	#projects #mrover-img {
-		overflow: hidden;
-		background-size: cover;
-		background-position: center;
-		background-image: url("/assets/images/mrover-title.jpg");
-	}
-
-	#projects #balloon-img {
-		overflow: hidden;
-		background-size: cover;
-		background-position: center;
-		background-image: url("/assets/images/balloon-title.jpg");
-	}
-
-	#projects #box-img {
-		overflow: hidden;
-		background-size: cover;
-		background-position: center;
-		background-image: url("/assets/images/box-title.jpg");
-	}
+	// CONTACT
 
 	#contactform {
 		background-color: _palette(midnightblue);
@@ -137,6 +129,8 @@
 	#contactform #contact-right {
 		//border-left: 1px solid _palette(darkcoolblue);
 	}
+
+	// FOOTER
 
 	#myfooter {
 		background-color: _palette(midnightblue);

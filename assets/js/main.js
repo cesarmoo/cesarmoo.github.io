@@ -38,6 +38,15 @@
     }, 650, "swing");
 	});
 
+	// handle project title sliding down on image hover
+	$("#projects .project-pic").hover(
+		function() {
+			$(this).find(".project-title").stop().slideDown(200);
+		},
+		function() {
+			$(this).find(".project-title").stop().slideUp(200);
+		}
+	);
 
 
 	// Original JS
