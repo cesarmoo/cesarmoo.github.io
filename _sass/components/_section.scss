@@ -79,28 +79,16 @@
 
 	#projects .project-pic {
 		width: 100%;
-		height: 270px;
+		height: auto;
 		overflow: hidden;
 		position: relative;
 		text-align: center;
-
-		@include breakpoint(medium) {
-			height: 250px;
-		}
-
-		@include breakpoint(small) {
-			height: 200px;
-		}
-
-		@include breakpoint(xsmall) {
-			height: 125px;
-		}
 	}
 
 	#projects .project-pic .project-title {
 		width: 100%;
 		height: 100%;
-		line-height: 270px;
+		line-height: 255px;
 		text-align: center;
 		position: absolute;
 		top: 0;
