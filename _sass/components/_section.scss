@@ -143,17 +143,19 @@
 
 	#projects .project-desc .project-desc-img {
 		width: 100%;
-		height: auto;
+		height: 200px;
+		overflow: hidden;
 		padding: 0 5px 5px 0;
+		margin-bottom: 5px;
 		overflow: hidden;
 	}
 
 	#projects .project-desc .project-desc-img img {
-		transition-duration: 0.15s;
+		//transition-duration: 0.15s;
 	}
 	#projects .project-desc .project-desc-img img:hover {
-		cursor: pointer;
-		filter: brightness(0.5)
+		//cursor: pointer;
+		//filter: brightness(0.5)
 	}
 
 	// CONTACT

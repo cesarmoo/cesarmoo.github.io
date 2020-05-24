@@ -285,6 +285,15 @@
 
                             </div>
                         </div>
+                        <div class="row mt-5 no-gutters">
+                            {% for i in (1..11) %}
+                                <div class="col-6 col-lg-3 project-desc-img">
+                                    <a href="/assets/images/claws/{{ i }}.jpg" data-lightbox="claws">
+                                        <img src="/assets/images/claws/{{ i }}.jpg"">
+                                    </a>
+                                </div>
+                            {% endfor %}
+                        </div>
                     </div>
 
                     <!-- Reggie -->
@@ -326,26 +335,13 @@
                             </div>
                         </div>
                         <div class="row mt-5 no-gutters">
-                            <div class="col-6 col-lg-3 project-desc-img">
-                                <a href="/assets/images/balloon/balloon-1.JPG" data-lightbox="balloon">
-                                    <img src="/assets/images/balloon/balloon-1.JPG"">
-                                </a>
-                            </div>
-                            <div class="col-6 col-lg-3 project-desc-img">
-                                <a href="/assets/images/balloon/balloon-2.JPG"" data-lightbox="balloon">
-                                    <img src="/assets/images/balloon/balloon-2.JPG"">
-                                </a>
-                            </div>
-                            <div class="col-6 col-lg-3 project-desc-img">
-                                <a href="/assets/images/balloon/balloon-3.JPG"" data-lightbox="balloon">
-                                    <img src="/assets/images/balloon/balloon-3.JPG"">
-                                </a>
-                            </div>
-                            <div class="col-6 col-lg-3 project-desc-img">
-                                <a href="/assets/images/balloon/balloon-4.JPG"" data-lightbox="balloon">
-                                    <img src="/assets/images/balloon/balloon-4.JPG"">
-                                </a>
-                            </div>
+                            {% for i in (1..4) %}
+                                <div class="col-6 col-lg-3 project-desc-img">
+                                    <a href="/assets/images/balloon/balloon-{{ i }}.JPG" data-lightbox="balloon">
+                                        <img src="/assets/images/balloon/balloon-{{ i }}.JPG"">
+                                    </a>
+                                </div>
+                            {% endfor %}
                         </div>
                     </div>
 
