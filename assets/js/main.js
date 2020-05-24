@@ -59,18 +59,18 @@
 		if (showing_images) {
 			showing_images = false;
 			var project_id = $(this).attr("project");
-			$image_row.stop().fadeOut(150);
-			$desc_row.stop().fadeIn(150);
+			$image_row.stop().fadeOut(0);
+			$desc_row.stop().fadeIn(0);
 			$active_desc = $desc_row.children(".project-desc[project='" + project_id + "']");
-			$active_desc.toggle();
+			$active_desc.stop().fadeIn(150);
 		}
 	});
 	$("#projects #project-back").click(function() {
 		if (!showing_images) {
-			$active_desc.toggle();
+			$active_desc.stop().fadeOut(150);
 			$active_desc = null;
-			$desc_row.stop().fadeOut(150);
-			$image_row.stop().fadeIn(150);
+			$desc_row.stop().fadeOut(0);
+			$image_row.stop().fadeIn(0);
 			showing_images = true;
 		}
 	});
