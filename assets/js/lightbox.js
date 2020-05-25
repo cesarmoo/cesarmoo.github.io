@@ -50,7 +50,7 @@
     // maxHeight: 600,
     positionFromTop: 50,
     resizeDuration: 150,
-    showImageNumberLabel: false,
+    showImageNumberLabel: true,
     wrapAround: true,
     disableScrolling: true,
     /*

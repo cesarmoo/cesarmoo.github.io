@@ -23,11 +23,20 @@
 		margin-top: -6.5em;
 		color: white;
 		font-weight: lighter;
+
+		@include breakpoint(medium) {
+			top: 20%;
+		}
 	}
 
 	.banner-text {
 		font-size: 3.25em;
 		line-height: 1em;
+
+		@include breakpoint(small) {
+			font-size: 3.25em;
+			line-height: 1.3em;
+		}
 	}
 
 	.typed-cursor {
