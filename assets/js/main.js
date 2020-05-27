@@ -9,25 +9,27 @@
 
 	// banner typing
 	// handles the typing text and showing the down caret
-	var banner_typing_options = {
-	  strings: ["Hi, I'm Cesar!"],
-	  typeSpeed: 40,
-	  showCursor: true,
-	  startDelay: 500,
-	  onComplete: (self) => {
-	  	$(".typed-cursor").css("color", "black");
-	  	var banner_typing_options = {
-			  strings: ["^300I love space, software, and design."],
-			  typeSpeed: 40,
-			  showCursor: true,
-			  onComplete: (self) => {
-			  	$("#down-caret").delay(200).fadeIn(500);
+	if ($("#banner").length) {
+		var banner_typing_options = {
+		  strings: ["Hi, I'm Cesar!"],
+		  typeSpeed: 40,
+		  showCursor: true,
+		  startDelay: 500,
+		  onComplete: (self) => {
+		  	$(".typed-cursor").css("color", "black");
+		  	var banner_typing_options = {
+				  strings: ["^300I love space, software, and design."],
+				  typeSpeed: 40,
+				  showCursor: true,
+				  onComplete: (self) => {
+				  	$("#down-caret").delay(200).fadeIn(500);
+				  }
+				};
+				var typed2 = new Typed('#typing2', banner_typing_options);
 			  }
 			};
-			var typed2 = new Typed('#typing2', banner_typing_options);
-		  }
-		};
-	var typed = new Typed('#typing', banner_typing_options);
+		var typed = new Typed('#typing', banner_typing_options);
+	}
 
 	// handles clicking on down caret to scroll down
 	var $caret = $("#down-caret .fa-chevron-down");
@@ -74,6 +76,74 @@
 			showing_images = true;
 		}
 	});
+
+	// squotes page
+  if ($("#squotes").length) {
+  	var list = [
+  		["The best place for optimized display is a dim, windowless room.  Luckily, Michigan had plenty to spare for our team.", "Alex"],
+  		["The ergonomics data requires human subjects which cannot currently gather.", "Alex"],
+  		["Despite being a relatively low risk project, there were major hiccups and changes not to mention a global pandemic", "Alex"],
+  		["This was part of what made BLiSS unique and losing access was a blow to our identity.", "Alex"],
+  		["The team strives for the system to not feel like a bug outside a windshield that can’t be swatted away.", "The team"],
+  		["For example, a flat heart rate and low body temperature of a radio-silent astronaut could be a red flag for those monitoring them.", "The team"],
+  		["Regardless of the specific emergency, this placeholder will allow for a general procedure to be established for an astronaut in peril.", "The team"],
+  		["my jokes are supposed to make you smuggle", "shil"],
+  		["What's that status on my H2O?", "Sahil"],
+  		["My morning routine now is, I wake up, I eat some chocolate chips...", "Amit"],
+  		["The user is always wrong.", "Cesar"],
+  		["I just voted what was already there. I don't think for myself.", "Drew"],
+  		["yeah he’s a real person. I met him online", "Riley"],
+  		["Hey, Corona!", "Emily trying to talk to Cortana"],
+  		["What have you been weightlifting? My emotions.", "Cesar"],
+  	];
+  	var used = [];
+
+  	var $quote_container = $("#quote-container");
+  	var $quote = $("#quote-text");
+  	var $author = $("#author");
+  	var $timer = $("#quote-time");
+
+  	var random_i = Math.floor(Math.random() * list.length);
+  	$quote.text(list[random_i][0]);
+		$author.text(list[random_i][1]);
+		list.splice(random_i, 1);
+		used.push(list[random_i]);
+
+		var time = 10;
+		var paused = false;
+		setInterval(function() {
+			if (time == 1) {
+				paused = true;
+				$timer.fadeOut(2000);
+				time = 6;
+				$timer.fadeIn(2000, function() {
+					paused = false;
+				});
+			}
+			else if (!paused) {
+				time -= 1;
+			}
+			$timer.text(time);
+		},
+		1000);
+
+  	setInterval(function() {
+  		if (!list.length) {
+  			list = used;
+  			used = [];
+  		}
+  		random_i = Math.floor(Math.random() * list.length);
+  		$quote_container.fadeOut(2000, function() {
+	  		$quote.text(list[random_i][0]);
+	  		$author.text(list[random_i][1]);
+	  		list.splice(random_i, 1);
+				used.push(list[random_i]);
+  		});
+  		$quote_container.fadeIn(2000);
+  	},
+  	10000);
+	}
+	
 
 
 	// Original JS

@@ -1,0 +1,7 @@
+---
+layout: squotes
+title: "#squotes"
+
+
+---
+
