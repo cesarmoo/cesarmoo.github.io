@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body>
+    <!-- Sections -->
+    <div id="main">
+        <!-- 404 -->
+        <section id="my404">
+            <div class="inner text-center">
+                <div class="row">
+                    <div class="col">
+                        <span class="big404">404</span>
+                        <br>
+                        <span class="small404">This page doesn't exist :(</span>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col mt-5">
+                        <a href="{{ site.url }}" class="home404">
+                            <span class="mr-1">Take me back home</span>
+                            <span class="fas fa-rocket"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <!-- end Sections -->
+
+    {% include footer.html %}
+
+</body>
+
+</html>
