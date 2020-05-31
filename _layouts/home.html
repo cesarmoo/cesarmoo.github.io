@@ -149,7 +149,7 @@
                             <div class="row">
                                 <div class="col mt-2">
                                     <span class="entry-content">
-                                        User Interface Lead & Software Engineer.
+                                        User Interface Lead & Lead Software Engineer of Mission Control Center.
                                         <br>
                                         Creating mixed-reality system to assist astronauts during EVAs. Leading development of "Mission Control" webserver and database. Read more about CLAWS below!
                                     </span>
@@ -273,11 +273,25 @@
                                 Collaborative Lab for Advancing Work in Space (CLAWS)
                             </div>
                             <div class="col-12 my-4">
-                                Coming soon.
-
-
-
-
+                                A little description box cannot do this team justice. No matter how many pictures or words I put here, nothing can fully capture what this team means to me. And trust me, I've tried many times to write a good summary, but I always end up deleting everything. For the sake of the reader, I'll try to spell out briefly what my experience on CLAWS has entailed. Stop me if I start getting too sappy.
+                                <br><br>
+                                As part of the NASA SUITS challenge, our first mission was to create an augmented reality tool for assisting astronauts during spacewalks. Since astronauts today still use very outdated systems like <a class="desc-links" href="https://www.hq.nasa.gov/alsj/a12/a12.lmpcuf18.jpg" target="_blank">cuff checklists</a>, an intuitive heads-up display can improve their operational efficiency by a ton. Our system handled displaying mission tasks, biometrics, and warnings, and could also scan QR codes. I worked on the mission clock module and the communications with the HoloLens. However, since there was nothing to actually receive any of those communications, that functionality was more of a proof-of-concept than anything.
+                                <br><br>
+                                In April 2019, we travelled down to the Johnson Space Center in Houston to showcase and test our system! We saw all the cool designs that teams from other universities brought to the table. We tested and received feedback on our system from scientists and mission controllers in <a class="desc-links" href="https://spacecenter.org/exhibits-and-experiences/nasa-tram-tour/building-9/" target="_blank">Building 9</a>. We even demonstrated our system in a shopping mall with Microsoft. This week was the highlight of my freshman year and solidified my dream of working in the space industry even more.
+                                <br><br>
+                                Okay, getting too sappy.
+                                <br><br>
+                                This year, we continued with the SUITS challenge. The overall goal of using augmented reality was the same, but this time we were helping astronauts during extravehicular activites on the surface of the Moon. Now, we needed to help with rover repairs, rock sample collection, and suit preparation. This time around, although I didn't have any of the "real" professional experience, I served as the UI/UX Lead because I love design and wanted to learn more about it from people who actually knew what they were doing.
+                                <br><br>
+                                Also, remember how last year we didn't have anything to interface with the HoloLens and receive communications? That and the need for a source of mock telemetry data was my inspiration behind our Mission Control Center (MCC). This web application acts as a central hub for the team of astronauts and scientists during every stage of the mission. Before the mission, the team can write mission procedures and mark waypoints on the map. During the mission, while the astronaut is out in the field, the supporting team will enter the Control Room page, which displays all the incoming data such as biometrics, field notes, and communications. Finally, after the mission is over, the team can collaborate again to go over the past mission and notes. They can use all this information to inspire and plan the next mission, and the cycles starts over again.
+                                <br><br>
+                                As the lead software engineer behind the MCC, this project is something that I am proud to call my baby. It used to live on our own permanent server in the basement of our CSRB building. But it wasn't immune to the coronavirus pushing everything online. Currently, it lives on Heroku and relies on a PostgreSQL database. On the bright side, that means it's much more accessible! Check it out <a class="desc-links" href="http://claws-mcc.herokuapp.com/" target="_blank">here</a>!
+                                <br><br>
+                                Speaking of the coronavirus, I am incredibly sad that our plans for visiting the Johnson Space Center this year were cancelled. The fact that many of the people on the team whom I love and admire are graduating makes this cancellation of our last hurrah sting even more.
+                                <br><br>
+                                But there is a bright side to all this. Our team has seen tremendous growth this last year (I'm not the freshman anymore!). I'm so excited to see where this team can go and what it can accomplish. We probably won't continue with the NASA SUITS challenge anymore, but that's a good thing because it means that we can widen our horizons even more. And as things in space tend to be, the horizons are limitless. We want to eventually lean towards becoming a research lab and that's just the start.
+                                <br><br>
+                                Hopefully this wasn't too long and unenjoyable of a read. To be honest, and I'm sure you know this feeling when you're trying to express an inexpressible experience, there's just so much more I can talk about. But I'll cut it off for now since I'm getting a little hungry. Go CLAWS! Love y'all.
                             </div>
                         </div>
                         <div class="row mt-5 no-gutters">
@@ -286,12 +300,12 @@
                                     <a href="/assets/images/claws/{{ i }}.jpg" data-lightbox="claws">
                                         <img src="/assets/images/claws/{{ i }}.jpg"">
                                         {% if forloop.last == true %}
-                                            <div class="more-images"><span>+7</span></div>
+                                            <div class="more-images"><span>+13</span></div>
                                         {% endif %}
                                     </a>
                                 </div>
                             {% endfor %}
-                            {% for i in (5..11) %}
+                            {% for i in (5..16) %}
                                 <a class="hidden-image" href="/assets/images/claws/{{ i }}.jpg" data-lightbox="claws"></a>
                             {% endfor %}
                         </div>

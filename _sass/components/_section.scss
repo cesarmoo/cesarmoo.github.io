@@ -130,6 +130,18 @@
 		display: none;
 	}
 
+	#projects .project-desc b {
+		color: inherit;
+	}
+
+	#projects .project-desc .desc-links {
+		color: _palette(darkcoolblue);
+	}
+	#projects .project-desc .desc-links:hover {
+		text-decoration: none;
+		color: _palette(darkcoolblue) !important;
+	}
+
 	#projects .project-desc .project-desc-title {
 		font-size: 1.5em;
 		font-weight: normal;
