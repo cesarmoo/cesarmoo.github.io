@@ -1,36 +1,30 @@
-/*
-	Forty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+// banner typing
+// handles the typing text and showing the down caret
+$("#banner").ready(function() {
+	var banner_typing_options = {
+	  strings: ["Hi, I'm Cesar!"],
+	  typeSpeed: 40,
+	  showCursor: true,
+	  startDelay: 500,
+	  onComplete: (self) => {
+	  	$(".typed-cursor").css("color", "black");
+	  	var banner_typing_options = {
+			  strings: ["^300I love space, software, and design."],
+			  typeSpeed: 40,
+			  showCursor: true,
+			  onComplete: (self) => {
+			  	$("#down-caret").delay(200).fadeIn(500);
+			  }
+			};
+			var typed2 = new Typed('#typing2', banner_typing_options);
+		  }
+		};
+	var typed = new Typed('#typing', banner_typing_options);
+});
 
 (function($) {
 	// Custom JS
-
-	// banner typing
-	// handles the typing text and showing the down caret
-	if ($("#banner").length) {
-		var banner_typing_options = {
-		  strings: ["Hi, I'm Cesar!"],
-		  typeSpeed: 40,
-		  showCursor: true,
-		  startDelay: 500,
-		  onComplete: (self) => {
-		  	$(".typed-cursor").css("color", "black");
-		  	var banner_typing_options = {
-				  strings: ["^300I love space, software, and design."],
-				  typeSpeed: 40,
-				  showCursor: true,
-				  onComplete: (self) => {
-				  	$("#down-caret").delay(200).fadeIn(500);
-				  }
-				};
-				var typed2 = new Typed('#typing2', banner_typing_options);
-			  }
-			};
-		var typed = new Typed('#typing', banner_typing_options);
-	}
-
+	
 	// handles clicking on down caret to scroll down
 	var $caret = $("#down-caret .fa-chevron-down");
 	var $scrollTo = $("#main");
