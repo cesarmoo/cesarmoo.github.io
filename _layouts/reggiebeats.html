@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body>
+    <div id="main" class="project-page">
+        <div id="projects" class="container my-5">
+            <div class="row">
+                <!-- Back button -->
+                <div class="col-auto">
+                    <div id="project-back">
+                        <a href="/#projects">
+                            <span class="fas fa-angle-left"></span>
+                            Back
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Reggie -->
+                <div project="reggie" class="col-12 mt-4 project-desc">
+                    <div class="row">
+                        <div class="col-12 project-desc-title">
+                            Reggie Beats
+                        </div>
+                        <div class="col-12 my-4">
+                            In the second semester of my freshman year, my dining hall installed speakers so we could listen to music while we were eating. But I noticed a problem. What in the world was this music? It was terrible. Just awful. Then I realized an even bigger problem. The only way for the students to suggest their own songs was through a Google form that I'm pretty sure nobody bothered to check.
+                            <br><br>
+                            A lightbulb went off in my head. What if there was a way for students to queue their favorite songs onto the speakers? The staff wouldn't need to check that Google form or manage the song player anymore. Plus, the students would have a more enjoyable time in the dining hall!
+                            <br><br>
+                            This was the inspiration behind Reggie Beats (named after our campus corgi, Reggie Bee). This Django web application made use of the Spotify API to allow users to search and add songs to their chosen queue. The device running Spotify just needed to be connected to the speakers and all the music handling would be done by Reggie. Since the intended setting was one of the nine dining halls on campus at UM, I knew I needed to implement strict admin and filtering capabilities.
+                            <br><br>
+                            Throughout the summer, what drove me to keep working was the vision of students using and enjoying my creation. I wanted the dining halls to become a lively place where the students had freedom in choosing what they listened to. 
+                            <br><br>
+                            When the school year started, I immediately went to work on pitching my idea to the dining administration. It was a surreal feeling as I pulled out my laptop and started demonstrating the interface and functionalities of Reggie. It felt even more amazing when I was given the go-ahead to implement Reggie into my dining hall as a pilot test run.
+                            <br><br>
+                            But that euphoria was soon cut short. Apparently, playing Spotify in public places is not allowed and that was all it took to have my idea shot down not long after it took off. There is a silver lining though. From all this work over the summer, I became really good at Django and SQL. This proved to be really useful later when creating the Mission Control Center for CLAWS.
+                            <br><br>
+                            Even though it can't be used by UM, you can still check out Reggie Beats <a class="desc-links" href="https://reggiebeats.herokuapp.com/" target="_blank">here</a>! (You do need a UM Google account)
+                        </div>
+                    </div>
+                    <div class="row mt-5 no-gutters">
+                    {% for i in (1..4) %}
+                        <div class="col-6 col-lg-3 project-desc-img">
+                            <a href="/assets/images/reggie/{{ i }}.png" data-lightbox="reggie">
+                                <img src="/assets/images/reggie/{{ i }}.png"">
+                            </a>
+                        </div>
+                    {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include footer.html %}
+
+</body>
+
+</html>

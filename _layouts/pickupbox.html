@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body>
+    <div id="main" class="project-page">
+        <div id="projects" class="container my-5">
+            <div class="row">
+                <!-- Back button -->
+                <div class="col-auto">
+                    <div id="project-back">
+                        <a href="/#projects">
+                            <span class="fas fa-angle-left"></span>
+                            Back
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Pickupbox -->
+                <div project="pickupbox" class="col-12 mt-4 project-desc">
+                    <div class="row">
+                        <div class="col-12 project-desc-title">
+                            PickupBox
+                        </div>
+                        <div class="col-12 my-4">
+                            This command line program reproduces (to an extent) what the very popular Dropbox service offers. The user can upload, store, and download files between their local directory and their "PickupBox server" directory. Through the PickupBox shell, the user can browse through their local and uploaded folders and view how much storage space is left.
+                            <br><br>
+                            This project relied on the use of networking, pipes, processes, and file handling. The central server process allows for multiple connections from different user processes.
+                            <br><br>
+                            Check out the repo <a class="desc-links" href="https://github.com/roger778876/pickupbox" target="_blank">here</a>!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include footer.html %}
+
+</body>
+
+</html>

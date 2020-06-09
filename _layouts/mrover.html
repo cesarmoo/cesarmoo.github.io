@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body>
+    <div id="main" class="project-page">
+        <div id="projects" class="container py-5">
+            <div class="row">
+                <!-- Back button -->
+                <div class="col-auto">
+                    <div id="project-back">
+                        <a href="/#projects">
+                            <span class="fas fa-angle-left"></span>
+                            Back
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mrover -->
+                <div project="mrover" class="col-12 mt-4 project-desc">
+                    <div class="row">
+                        <div class="col-12 project-desc-title">
+                            Michigan Mars Rover
+                        </div>
+                        <div class="col-12 my-4">
+                            Here, I worked on developing an emergency obstacle detection system to stop the rover in case the computer vision fails for some reason. I experimented with various different configuration of ultrasonic sensor arrays and eventually created a system that increased the detection accuracy up to 10 feet. This was my first project team at UM and was also where I learned that I'm not a big EE guy.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include footer.html %}
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body>
+    <div id="main" class="project-page">
+        <div id="projects" class="container my-5">
+            <div class="row">
+                <!-- Back button -->
+                <div class="col-auto">
+                    <div id="project-back">
+                        <a href="/#projects">
+                            <span class="fas fa-angle-left"></span>
+                            Back
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Balloon -->
+                <div project="balloon" class="col-12 mt-4 project-desc">
+                    <div class="row">
+                        <div class="col-12 project-desc-title">
+                            Weather Balloon Payload
+                        </div>
+                        <div class="col-12 my-4">
+                            This semester-long project was a step away from hardcore coding and into the realm of CE and EE. We designed our own PCB that contained accelerometers, altitude sensors, pressure sensors, and UV light sensors. This was all encased inside our payload structure, a hard styrofoam cube, which also contained our GoPro. Managing to keep our entire payload under 1 pound was quite an accomplishment.
+                            <br><br>
+                            So what was the overall science objective of this mission? To prove, once and for all, that the Earth is indeed flat.
+                            <br><br>
+                            Unfortunately, our hypothesis was disproven. But, on the bright side, we did capture some unforgettable images!
+                        </div>
+                    </div>
+                    <div class="row mt-5 no-gutters">
+                        {% for i in (1..4) %}
+                            <div class="col-6 col-lg-3 project-desc-img">
+                                <a href="/assets/images/balloon/balloon-{{ i }}.JPG" data-lightbox="balloon">
+                                    <img src="/assets/images/balloon/balloon-{{ i }}.JPG"">
+                                </a>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include footer.html %}
+
+</body>
+
+</html>

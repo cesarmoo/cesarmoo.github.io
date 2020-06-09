@@ -105,13 +105,21 @@
 		cursor: pointer;
 	}
 
-	#projects .description-row {
-		display: none;
+	.project-page {
+		background-color: white !important;
 	}
 
 	#projects #project-back {
 		color: black;
 		font-size: 1.3em;
+	}
+	#projects #project-back a {
+		color: black;
+		border: 0;
+	}
+	#projects #project-back a:hover {
+		color: _palette(darkcoolblue) !important;
+		text-decoration: none;
 	}
 	#projects #project-back .fa-angle-left {
 		font-size: 1em;
@@ -127,7 +135,6 @@
 		font-size: 1.15em;
 		font-weight: lighter;
 		line-height: 1.6em;
-		display: none;
 	}
 
 	#projects .project-desc b {
@@ -199,6 +206,7 @@
 		background-color: _palette(midnightblue);
 		color: white;
 		font-weight: lighter;
+		height: 10vh;
 	}
 
 	#myfooter .inner {
