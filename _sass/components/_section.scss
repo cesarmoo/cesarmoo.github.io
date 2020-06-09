@@ -48,12 +48,20 @@
 		font-style: italic;
 		vertical-align: -33%;
 		font-weight: lighter;
+
+		@include breakpoint(small) {
+			font-weight: normal;
+		}
 	}
 
 	#resume .entry-content {
 		font-size: 1.15em;
 		font-weight: lighter;
 		line-height: 1.6em;
+
+		@include breakpoint(small) {
+			font-weight: normal;
+		}
 	}
 
 	#resume b {
@@ -65,10 +73,6 @@
 
 	#projects {
 		background-color: white;
-	}
-
-	#projects .image-row {
-		//display: none;
 	}
 
 	#projects .project-pic {
@@ -135,6 +139,10 @@
 		font-size: 1.15em;
 		font-weight: lighter;
 		line-height: 1.6em;
+
+		@include breakpoint(small) {
+			font-weight: normal;
+		}
 	}
 
 	#projects .project-desc b {
