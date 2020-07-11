@@ -69,6 +69,31 @@
 		font-weight: normal;
 	}
 
+	#resume #course-link {
+		color: black;
+		border: 0;
+
+		@include breakpoint(small) {
+			font-size: 1.15em;
+		}
+	}
+	#resume #course-link:hover {
+		color: _palette(darkcoolblue) !important;
+		text-decoration: none;
+	}
+
+	#resume .fa-bookmark {
+		vertical-align: -7%;
+	}
+
+	// COURSEWORK
+
+	.coursework-year {
+		font-size: 1.3em;
+		font-weight: normal;
+	}
+
+
 	// PROJECTS
 
 	#projects {
@@ -263,7 +288,6 @@
 	}
 
 	#my404 .fa-rocket {
-		color: white;
 		font-size: 1em;
 	}
 
