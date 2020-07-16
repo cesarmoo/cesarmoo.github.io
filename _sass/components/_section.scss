@@ -258,7 +258,7 @@
 		text-align: center;
 		padding-top: 7px;
 
-		@include breakpoint(small) {
+		@include breakpoint(medium) {
 			display: none;
 		}
 	}
