@@ -257,6 +257,10 @@
 		left: 20px;
 		text-align: center;
 		padding-top: 7px;
+
+		@include breakpoint(small) {
+			display: none;
+		}
 	}
 
 	#toggle-light .fa-sun {
