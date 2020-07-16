@@ -100,7 +100,7 @@
 		background-color: white;
 	}
 
-	#projects .project-pic {
+	.project-pic {
 		width: 100%;
 		height: auto;
 		padding: 0 5px 5px 0;
@@ -109,7 +109,7 @@
 		text-align: center;
 	}
 
-	#projects .project-pic .project-title {
+	.project-pic .project-title {
 		width: calc(100% - 5px);
 		height: calc(100% - 5px);
 		line-height: 265px;
@@ -124,18 +124,18 @@
 		display: none;
 	}
 
-	#projects .project-pic .project-title span {
+	.project-pic .project-title span {
 		display: inline-block;
 		vertical-align: middle;
 		line-height: normal;
 	}
 
-	#projects .project-pic:hover {
+	.project-pic:hover {
 		cursor: pointer;
 	}
 
 	.project-page {
-		background-color: white !important;
+		background-color: white;
 	}
 
 	#projects #project-back {
@@ -222,6 +222,17 @@
 		}
 	}
 
+	// EXPERIENCES
+
+	#experiences {
+		background-color: _palette(gray);
+		color: black;
+	}
+
+	.smaller-title {
+		font-size: 2em !important;
+	}
+
 	// CONTACT
 
 	#contactform {
@@ -231,6 +242,36 @@
 
 	#contactform #contact-right {
 		//border-left: 1px solid _palette(darkcoolblue);
+	}
+
+	// TOGGLE LIGHT/DARK MODE
+
+	#toggle-light {
+		width: 80px;
+		height: 40px;
+		border: 2px solid rgb(61, 61, 61);
+		border-radius: 20px;
+		background-color: black;
+		position: absolute;
+		bottom: 20px;
+		left: 20px;
+		text-align: center;
+		padding-top: 7px;
+	}
+
+	#toggle-light .fa-sun {
+		font-size: 1.3em;
+		cursor: pointer;
+	}
+
+	#toggle-light .separator {
+		width: 0px;
+		border-right: 1px solid rgb(61, 61, 61);
+	}
+
+	#toggle-light .fa-moon {
+		font-size: 1.2em;
+		cursor: pointer;
 	}
 
 	// FOOTER

@@ -1,5 +1,5 @@
 // banner typing
-// handles the typing text and showing the down caret
+// handle the typing text and showing the down caret
 $("#banner-div").ready(function() {
 	var banner_typing_options = {
 	  strings: ["Hi, I'm Cesar!"],
@@ -25,7 +25,7 @@ $("#banner-div").ready(function() {
 (function($) {
 	// Custom JS
 	
-	// handles clicking on down caret to scroll down
+	// handle clicking on down caret to scroll down
 	var $caret = $("#down-caret .fa-chevron-down");
 	var $scrollTo = $("#main");
 	$caret.click(function() {
@@ -34,9 +34,95 @@ $("#banner-div").ready(function() {
     }, 650, "swing");
 	});
 
+	// handle toggling light/dark mode
+	var $light_btn = $("#toggle-light-btn");
+	var $dark_btn = $("#toggle-dark-btn");
+	var $about = $("#about-me");
+	var $resume = $("#resume");
+	var $projects = $("#projects");
+	var $exps = $("#experiences");
+
+	if (document.cookie.indexOf('lightdark') > -1) {
+		var lightdark_val = document.cookie
+			.split('; ')
+			.find(row => row.startsWith("lightdark"))
+			.split('=')[1];
+	
+		if (lightdark_val == "light") {
+			switch_light();
+		}
+		else {
+			switch_dark();
+		}
+	}
+	else {
+		// default
+	}
+
+	$light_btn.click(function() {
+		document.cookie = "lightdark=light;max-age=2592000";
+		switch_light();
+	});
+
+	$dark_btn.click(function() {
+		document.cookie = "lightdark=dark;max-age=2592000";
+		switch_dark();
+	});
+
+	function switch_light() {
+		if (window.location.pathname == '/') {
+			$light_btn.css("color", "orange");
+			$dark_btn.css("color", "gray");
+	
+			$about.css("background-color", "#0098CC");
+			$resume.css("background-color", "#f8f8f8");
+			$resume.css("color", "black");
+			$("#resume .button-no-click").addClass("black");
+			$("#resume b").css("color", "black");
+			$("#resume #course-link").css("color", "black");
+			$projects.css("background-color", "white");
+			$("#projects .button-no-click").addClass("black");
+			$exps.css("background-color", "#f8f8f8");
+			$("#experiences .button-no-click").addClass("black");
+		}
+		else {
+			$("body").css("background-color", "white");
+			$(".project-page").css("background-color", "white");
+			$("#projects").css("background-color", "white");
+			$("#project-back a").css("color", "black");
+			$(".project-desc").css("color", "black");
+			$("hr").css("border-top", "1px solid #ccc");
+		}
+	}
+	function switch_dark() {
+		if (window.location.pathname == '/') {
+			$dark_btn.css("color", "#0098CC");
+			$light_btn.css("color", "gray");
+	
+			$about.css("background-color", "#1F2833");
+			$resume.css("background-color", "#292929");
+			$resume.css("color", "white");
+			$("#resume .button-no-click").removeClass("black");
+			$("#resume b").css("color", "white");
+			$("#resume #course-link").css("color", "white");
+			$projects.css("background-color", "#2E2E2E");
+			$("#projects .button-no-click").removeClass("black");
+			$exps.css("background-color", "#292929");
+			$("#experiences .button-no-click").removeClass("black");
+		}
+		else {
+			$("body").css("background-color", "#292929");
+			$(".project-page").css("background-color", "#292929");
+			$("#projects").css("background-color", "#292929");
+			$("#project-back a").css("color", "white");
+			$(".project-desc").css("color", "white");
+			$("hr").css("border-top", "1px solid gray");
+		}
+
+	}
 
 	// handle project title showing on image hover
-	var $proj_pic = $("#projects .project-pic");
+	var $proj_pic = $(".project-pic");
 	$proj_pic.hover(
 		function() {
 			$(this).find(".project-title").stop().fadeIn(150);
@@ -47,29 +133,29 @@ $("#banner-div").ready(function() {
 	);
 
 	// handling displaying project description on click
-	var showing_images = true;
-	var $active_desc;
-	var $desc_row = $("#projects .description-row");
-	var $image_row = $("#projects .image-row");
-	$proj_pic.click(function() {
-		if (showing_images) {
-			showing_images = false;
-			var project_id = $(this).attr("project");
-			$image_row.stop().fadeOut(0);
-			$desc_row.stop().fadeIn(0);
-			$active_desc = $desc_row.children(".project-desc[project='" + project_id + "']");
-			$active_desc.stop().fadeIn(150);
-		}
-	});
-	$("#projects #project-back").click(function() {
-		if (!showing_images) {
-			$active_desc.stop().fadeOut(150);
-			$active_desc = null;
-			$desc_row.stop().fadeOut(0);
-			$image_row.stop().fadeIn(0);
-			showing_images = true;
-		}
-	});
+	// var showing_images = true;
+	// var $active_desc;
+	// var $desc_row = $("#projects .description-row");
+	// var $image_row = $("#projects .image-row");
+	// $proj_pic.click(function() {
+	// 	if (showing_images) {
+	// 		showing_images = false;
+	// 		var project_id = $(this).attr("project");
+	// 		$image_row.stop().fadeOut(0);
+	// 		$desc_row.stop().fadeIn(0);
+	// 		$active_desc = $desc_row.children(".project-desc[project='" + project_id + "']");
+	// 		$active_desc.stop().fadeIn(150);
+	// 	}
+	// });
+	// $("#projects #project-back").click(function() {
+	// 	if (!showing_images) {
+	// 		$active_desc.stop().fadeOut(150);
+	// 		$active_desc = null;
+	// 		$desc_row.stop().fadeOut(0);
+	// 		$image_row.stop().fadeIn(0);
+	// 		showing_images = true;
+	// 	}
+	// });
 
 	// squotes page
   if ($("#squotes").length) {
