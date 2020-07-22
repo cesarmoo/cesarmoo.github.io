@@ -34,6 +34,73 @@ $("#banner-div").ready(function() {
     }, 650, "swing");
 	});
 
+	// Technical skills chart
+	var ctx = document.getElementById('skills-chart').getContext('2d');
+	var chart = new Chart(ctx, {
+		// The type of chart we want to create
+		type: 'bar',
+
+		// The data for our dataset
+		data: {
+			labels: ['C/C++', 'Python',
+				['Algorithms &', 'Data structures'],
+				'Git', 'SQL',
+				['Web development', '(Full stack)'],
+				'API development',
+				['GUI development', '(Kivy, Qt)']],
+			datasets: [{
+				backgroundColor: 'rgb(0, 152, 204)',
+				data: [3, 3, 3, 3, 2, 3, 2, 2]
+			}],
+		},
+		
+		// Configuration options go here
+		options: {
+			legend: {
+				display: false
+			},
+			scales: {
+				yAxes: [{
+					ticks: {
+						min: 0,
+						max: 3,
+						autoSkip: false,
+						fontSize: 14,
+						callback: function (label, index, labels) {
+							switch (label) {
+								case 0:
+									return '';
+								case 1:
+									return 'Beginner';
+								case 2:
+									return 'Intermediate';
+								case 3:
+									return 'Advanced';
+							}
+						}
+					},
+					gridLines: {
+						display: false,
+						color: 'gray',
+					},
+				}],
+				xAxes: [{
+					ticks: {
+						autoSkip: false,
+						fontSize: 14,
+					},
+					gridLines: {
+						display: false,
+						color: 'gray',
+					},
+				}]
+			},
+			tooltips: {
+				enabled: false,
+			}
+		}
+	});
+
 	// handle toggling light/dark mode
 	var $light_btn = $("#toggle-light-btn");
 	var $dark_btn = $("#toggle-dark-btn");
@@ -84,6 +151,10 @@ $("#banner-div").ready(function() {
 			$("#projects .button-no-click").addClass("black");
 			$exps.css("background-color", "#f8f8f8");
 			$("#experiences .button-no-click").addClass("black");
+			$("hr").css("border-top", "1px solid #ccc");
+			chart.options.scales.yAxes[0].ticks.minor.fontColor = "black";
+			chart.options.scales.xAxes[0].ticks.minor.fontColor = "black";
+			chart.update();
 		}
 		else {
 			$("body").css("background-color", "white");
@@ -98,7 +169,7 @@ $("#banner-div").ready(function() {
 		if (window.location.pathname == '/') {
 			$dark_btn.css("color", "#0098CC");
 			$light_btn.css("color", "gray");
-	
+			
 			$about.css("background-color", "#1F2833");
 			$resume.css("background-color", "#292929");
 			$resume.css("color", "white");
@@ -109,6 +180,10 @@ $("#banner-div").ready(function() {
 			$("#projects .button-no-click").removeClass("black");
 			$exps.css("background-color", "#292929");
 			$("#experiences .button-no-click").removeClass("black");
+			$("hr").css("border-top", "1px solid gray");
+			chart.options.scales.yAxes[0].ticks.minor.fontColor = "white";
+			chart.options.scales.xAxes[0].ticks.minor.fontColor = "white";
+			chart.update();
 		}
 		else {
 			$("body").css("background-color", "#292929");
@@ -158,7 +233,7 @@ $("#banner-div").ready(function() {
 	// });
 
 	// squotes page
-  if ($("#squotes").length) {
+if (window.location.pathname == '/squotes') {
   	var list = [
   		["The best place for optimized display is a dim, windowless room.  Luckily, Michigan had plenty to spare for our team.", "Alex"],
   		["The ergonomics data requires human subjects which cannot currently gather.", "Alex"],

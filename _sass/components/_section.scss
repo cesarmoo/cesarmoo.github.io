@@ -21,11 +21,21 @@
 		color: black;
 	}
 
+	#resume hr.mobile-disappear {
+		@include breakpoint(medium) {
+			display: none;
+		}
+	}
+
 	#resume .fa-graduation-cap {
 		font-size: 2em;
 	}
 
 	#resume .fa-code {
+		font-size: 1.7em;
+	}
+
+	#resume .fa-sitemap {
 		font-size: 1.7em;
 	}
 
