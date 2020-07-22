@@ -21,6 +21,12 @@
 		color: black;
 	}
 
+	#resume #tech-skills {
+		@include breakpoint(small) {
+			display: none;
+		}
+	}
+
 	#resume hr.mobile-disappear {
 		@include breakpoint(medium) {
 			display: none;
