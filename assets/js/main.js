@@ -25,81 +25,83 @@ $("#banner-div").ready(function() {
 (function($) {
 	// Custom JS
 	
-	// handle clicking on down caret to scroll down
-	var $caret = $("#down-caret .fa-chevron-down");
-	var $scrollTo = $("#main");
-	$caret.click(function() {
-    $('html, body').animate({
-      scrollTop: $scrollTo.offset().top
-    }, 650, "swing");
-	});
+	if (window.location.pathname == '/') {
+		// handle clicking on down caret to scroll down
+		var $caret = $("#down-caret .fa-chevron-down");
+		var $scrollTo = $("#main");
+		$caret.click(function() {
+		$('html, body').animate({
+		scrollTop: $scrollTo.offset().top
+		}, 650, "swing");
+		});
 
-	// Technical skills chart
-	var ctx = document.getElementById('skills-chart').getContext('2d');
-	var chart = new Chart(ctx, {
-		// The type of chart we want to create
-		type: 'bar',
+		// Technical skills chart
+		var ctx = document.getElementById('skills-chart').getContext('2d');
+		var chart = new Chart(ctx, {
+			// The type of chart we want to create
+			type: 'bar',
 
-		// The data for our dataset
-		data: {
-			labels: ['C/C++', 'Python',
-				['Algorithms &', 'Data structures'],
-				'Git', 'SQL',
-				['Web development', '(Full stack)'],
-				'API development',
-				['GUI development', '(Kivy, Qt)']],
-			datasets: [{
-				backgroundColor: 'rgb(0, 152, 204)',
-				data: [3, 3, 3, 3, 2, 3, 2, 2]
-			}],
-		},
-		
-		// Configuration options go here
-		options: {
-			legend: {
-				display: false
-			},
-			scales: {
-				yAxes: [{
-					ticks: {
-						min: 0,
-						max: 3,
-						autoSkip: false,
-						fontSize: 14,
-						callback: function (label, index, labels) {
-							switch (label) {
-								case 0:
-									return '';
-								case 1:
-									return 'Beginner';
-								case 2:
-									return 'Intermediate';
-								case 3:
-									return 'Advanced';
-							}
-						}
-					},
-					gridLines: {
-						display: false,
-						color: 'gray',
-					},
+			// The data for our dataset
+			data: {
+				labels: ['C/C++', 'Python',
+					['Algorithms &', 'Data structures'],
+					'Git', 'SQL',
+					['Web development', '(Full stack)'],
+					'API development',
+					['GUI development', '(Kivy, Qt)']],
+				datasets: [{
+					backgroundColor: 'rgb(0, 152, 204)',
+					data: [3, 3, 3, 3, 2, 3, 2, 2]
 				}],
-				xAxes: [{
-					ticks: {
-						autoSkip: false,
-						fontSize: 14,
-					},
-					gridLines: {
-						display: false,
-						color: 'gray',
-					},
-				}]
 			},
-			tooltips: {
-				enabled: false,
+			
+			// Configuration options go here
+			options: {
+				legend: {
+					display: false
+				},
+				scales: {
+					yAxes: [{
+						ticks: {
+							min: 0,
+							max: 3,
+							autoSkip: false,
+							fontSize: 14,
+							callback: function (label, index, labels) {
+								switch (label) {
+									case 0:
+										return '';
+									case 1:
+										return 'Beginner';
+									case 2:
+										return 'Intermediate';
+									case 3:
+										return 'Advanced';
+								}
+							}
+						},
+						gridLines: {
+							display: false,
+							color: 'gray',
+						},
+					}],
+					xAxes: [{
+						ticks: {
+							autoSkip: false,
+							fontSize: 14,
+						},
+						gridLines: {
+							display: false,
+							color: 'gray',
+						},
+					}]
+				},
+				tooltips: {
+					enabled: false,
+				}
 			}
-		}
-	});
+		});
+	}
 
 	// handle toggling light/dark mode
 	var $light_btn = $("#toggle-light-btn");
@@ -193,7 +195,6 @@ $("#banner-div").ready(function() {
 			$(".project-desc").css("color", "white");
 			$("hr").css("border-top", "1px solid gray");
 		}
-
 	}
 
 	// handle project title showing on image hover
