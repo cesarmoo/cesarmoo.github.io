@@ -97,7 +97,17 @@ $("#banner-div").ready(function() {
 					}]
 				},
 				tooltips: {
-					enabled: false,
+					displayColors: false,
+					callbacks: {
+						label: function (tooltipItem, data) {
+							switch (tooltipItem.index) {
+								case 0:
+									return "3 years";
+								case 1:
+									return "5 years";
+							}
+						}
+					}
 				}
 			}
 		});
