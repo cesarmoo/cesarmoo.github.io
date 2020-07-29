@@ -136,6 +136,7 @@ $("#banner-div").ready(function() {
 	}
 	else {
 		// default
+		switch_light();
 	}
 
 	$light_btn.click(function() {

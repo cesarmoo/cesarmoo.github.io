@@ -238,6 +238,24 @@
 		}
 	}
 
+	.project-pic .more-images {
+		width: calc(100% - 5px);
+		height: calc(100% - 5px);
+		line-height: 265px;
+		text-align: center;
+		position: absolute;
+		top: 0;
+		left: 0;
+		color: white;
+		font-size: 3em;
+		font-weight: lighter;
+		background-color: rgba(0,0,0,0.75);
+
+		@include breakpoint(small) {
+			line-height: 100px;
+		}
+	}
+
 	// EXPERIENCES
 
 	#experiences {
