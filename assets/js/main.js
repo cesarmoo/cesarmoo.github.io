@@ -140,16 +140,16 @@ $("#banner-div").ready(function() {
 	}
 
 	$light_btn.click(function() {
-		document.cookie = "lightdark=light;max-age=2592000";
 		switch_light();
 	});
 
 	$dark_btn.click(function() {
-		document.cookie = "lightdark=dark;max-age=2592000";
 		switch_dark();
 	});
 
 	function switch_light() {
+		document.cookie = "lightdark=light;max-age=2592000";
+
 		if (window.location.pathname == '/') {
 			$light_btn.css("color", "orange");
 			$dark_btn.css("color", "gray");
@@ -179,6 +179,8 @@ $("#banner-div").ready(function() {
 		}
 	}
 	function switch_dark() {
+		document.cookie = "lightdark=dark;max-age=2592000";
+
 		if (window.location.pathname == '/') {
 			$dark_btn.css("color", "#0098CC");
 			$light_btn.css("color", "gray");
