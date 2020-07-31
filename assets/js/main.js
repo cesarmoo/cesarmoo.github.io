@@ -24,7 +24,13 @@ $("#banner-div").ready(function() {
 
 (function($) {
 	// Custom JS
+
+	// enable tooltips
+	$(function () {
+		$('[data-toggle="tooltip"]').tooltip()
+	})
 	
+
 	if (window.location.pathname == '/') {
 		// handle clicking on down caret to scroll down
 		var $caret = $("#down-caret .fa-chevron-down");
@@ -136,7 +142,7 @@ $("#banner-div").ready(function() {
 	}
 	else {
 		// default
-		switch_light();
+		switch_dark();
 	}
 
 	$light_btn.click(function() {
