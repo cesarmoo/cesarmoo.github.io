@@ -111,6 +111,10 @@
 		font-size: 0.9em;
 	}
 
+	#resume .fa-user-friends {
+		font-size: 0.8em;
+	}
+
 	// #resume .fa-chevron-circle-down {
 	// 	font-size: 0.9em;
 	// }
@@ -351,7 +355,7 @@
 		background-color: _palette(midnightblue);
 		color: white;
 		font-weight: lighter;
-		height: 10vh;
+		// height: 50px;
 	}
 
 	#myfooter .inner {
@@ -364,7 +368,7 @@
 		border: 0;
 	}
 	#myfooter a:hover {
-		color: _palette(coolblue);
+		color: _palette(darkcoolblue);
 		cursor: pointer;
 		transition-duration: 0.15s;
 	}
