@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body>
+    <!-- Sections -->
+    <div id="main">
+        <!-- 404 -->
+        <section id="my404">
+            <div class="inner text-center">
+                <div class="row">
+                    <div class="col">
+                        <i class="fas fa-moon"></i>
+                        <span class="ml-2 bigsleepytime">sleepytime</span>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col">
+                        <span class="smallsleepytime">
+                            The current time is <span id="sleepcurrtime">none</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col">
+                        <span class="smallsleepytime">
+                            You should wake up at<br>
+                            <span id="sleepwaketime0"></span><br>
+                            <span id="sleepwaketime1"></span><br>
+                            <span id="sleepwaketime2"></span><br>
+                            <span id="sleepwaketime3"></span><br>
+                            <span id="sleepwaketime4"></span><br>
+                            or <span id="sleepwaketime5"></span><br>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <!-- end Sections -->
+
+    {% include footer.html %}
+    <script src="{{ "assets/js/sleepytime.js" | absolute_url }}"></script>
+
+
+</body>
+
+</html>

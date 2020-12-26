@@ -449,7 +449,46 @@
 		right: 10%;
 		font-size: 1.5em;
 	}
-	 
+
+	// SLEEPYTIME
+	.fa-moon {
+		font-size: 2.5em;
+		color: white;
+	}
+	.bigsleepytime {
+		color: #b19cd9;
+		font-weight: bold;
+		font-size: 3em;
+		font-style: italic;
+	}
+
+	.smallsleepytime {
+		color: white;
+		font-size: 2em;
+	}
+
+	#sleepcurrtime {
+		color: #90ee90;
+	}
+
+	#sleepwaketime0 {
+		color: #9482b4;
+	}
+	#sleepwaketime1 {
+		color: #b39ddd;
+	}
+	#sleepwaketime2 {
+		color: #6f98ac;
+	}
+	#sleepwaketime3 {
+		color: #79a4b8;
+	}
+	#sleepwaketime4 {
+		color: #74b974;
+	}
+	#sleepwaketime5 {
+		color: #90ee90;
+	}
 
 
 // Original CSS
