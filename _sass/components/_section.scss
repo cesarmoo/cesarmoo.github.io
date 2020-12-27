@@ -461,9 +461,13 @@
 		font-size: 3em;
 		font-style: italic;
 	}
-	.bigsleepytime a,
+	.bigsleepytime a {
+		color: #b19cd9;
+		text-decoration: none;
+		border: none;
+	}
 	.bigsleepytime a:hover {
-		color: #b19cd9 !important;
+		color: #9482b4 !important;
 		text-decoration: none;
 		border: none;
 	}
