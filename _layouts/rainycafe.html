@@ -40,12 +40,14 @@
                     <div class="col play-pause">
                         <span id="play-btn" class="fas fa-play" onclick="play()"></span>
                         <span id="pause-btn" class="fas fa-pause" onclick="pause()"></span>
-                        <audio id="rain" loop>
-                            <source src="{{ 'assets/audio/rain.mp3' | absolute_url }}" type="audio/mpeg">
+                        <audio id="rain" loop preload>
+                            <source src="https://s3.amazonaws.com/rainycafe/audio/rain.mp3" type="audio/mpeg">
+                            <source src="https://s3.amazonaws.com/rainycafe/audio/rain.ogg" type="audio/ogg">
                             Your browser does not support the audio element.
                         </audio>
-                        <audio id="cafe" loop>
-                            <source src="{{ 'assets/audio/cafe.mp3' | absolute_url }}" type="audio/mpeg">
+                        <audio id="cafe" loop preload>
+                            <source src="https://s3.amazonaws.com/rainycafe/audio/cafe.mp3" type="audio/mpeg">
+                            <source src="https://s3.amazonaws.com/rainycafe/audio/cafe.ogg" type="audio/ogg">
                         </audio>
                     </div>
                 </div>
