@@ -532,6 +532,38 @@
 		text-decoration: none;
 	}
 
+	// Rainycafe
+	#rainycafe {
+		background-color: _palette(midnightblue);
+		height: 100vh;
+	}
+
+	#rainycafe .smallrc {
+		color: white;
+		font-size: 3em;
+	}
+
+	#rainycafe .fa-cloud {
+		color: white;
+		font-size: 2.5em;
+	}
+
+	#rainycafe .play-pause span {
+		color: white;
+		font-size: 3em;
+		text-decoration: none;
+	}
+	#rainycafe .play-pause span:hover {
+		color: _palette(coolblue);
+		cursor: pointer;
+		transition-duration: 0.15s;
+		text-decoration: none;
+	}
+
+	#rainycafe .fa-pause {
+		display: none;
+	}
+
 
 
 // Original CSS

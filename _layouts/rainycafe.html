@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<!-- Credit to the audio tracks from the original rainycafe.com -->
+<body>
+    <script>
+        function play() {
+            var rain = document.getElementById("rain");
+            var cafe = document.getElementById("cafe");
+            rain.play();
+            cafe.play();
+            document.getElementById("play-btn").style.display = "none";
+            document.getElementById("pause-btn").style.display = "inline";
+        }
+
+        function pause() {
+            var rain = document.getElementById("rain");
+            var cafe = document.getElementById("cafe");
+            rain.pause();
+            cafe.pause();
+            document.getElementById("play-btn").style.display = "inline";
+            document.getElementById("pause-btn").style.display = "none";
+        }
+    </script>
+    <!-- Sections -->
+    <div id="main">
+        <!-- Egg -->
+        <section id="rainycafe">
+            <div class="inner text-center">
+                <div class="row">
+                    <div class="col">
+                        <span class="fas fa-cloud mr-2"></span>
+                        <span class="smallrc" style="color:#7296c4">rainy</span>
+                        <span class="smallrc" style="color:#E5753C">cafe</span>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col play-pause">
+                        <span id="play-btn" class="fas fa-play" onclick="play()"></span>
+                        <span id="pause-btn" class="fas fa-pause" onclick="pause()"></span>
+                        <audio id="rain" loop>
+                            <source src="{{ 'assets/audio/rain.mp3' | absolute_url }}" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                        <audio id="cafe" loop>
+                            <source src="{{ 'assets/audio/cafe.mp3' | absolute_url }}" type="audio/mpeg">
+                        </audio>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <!-- end Sections -->
+
+    {% include footer.html %}
+
+</body>
+
+</html>
