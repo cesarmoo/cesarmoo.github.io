@@ -1,0 +1,4 @@
+---
+layout: egg
+title: egg
+---

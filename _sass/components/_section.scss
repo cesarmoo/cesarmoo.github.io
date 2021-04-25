@@ -87,7 +87,7 @@
 
 	#resume #course-link {
 		color: black;
-		border: 0;
+		border: 0 0 1px 0 dotted;
 
 		@include breakpoint(small) {
 			font-size: 1.15em;
@@ -96,6 +96,7 @@
 	#resume #course-link:hover {
 		color: _palette(darkcoolblue) !important;
 		text-decoration: none;
+		border: 0;
 	}
 
 	#resume .fa-bookmark {
@@ -373,6 +374,10 @@
 		transition-duration: 0.15s;
 	}
 
+	#myfooter .fa-egg {
+		font-size: 0.9em;
+	}
+
 	// 404 page
 	#my404 {
 		background-color: _palette(midnightblue);
@@ -503,6 +508,30 @@
 	#sleepwaketime5 {
 		color: #90ee90;
 	}
+
+	// Easter egg page
+	#egg {
+		background-color: _palette(midnightblue);
+		height: 100vh;
+	}
+
+	#egg .smallegg {
+		color: white;
+		font-size: 2em;
+	}
+
+	#egg .egglink {
+		color: white;
+		font-size: 1.3em;
+		text-decoration: none;
+	}
+	#egg .egglink:hover {
+		color: _palette(coolblue);
+		cursor: pointer;
+		transition-duration: 0.15s;
+		text-decoration: none;
+	}
+
 
 
 // Original CSS
