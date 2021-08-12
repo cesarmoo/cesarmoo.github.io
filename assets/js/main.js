@@ -51,13 +51,13 @@ $("#banner-div").ready(function() {
 			data: {
 				labels: ['C/C++', 'Python',
 					['Algorithms &', 'Data structures'],
-					'Git', 'SQL',
+					'Git', 'Databases/SQL',
 					['Web development', '(Full stack)'],
 					'API development',
-					['GUI development', '(Kivy, Qt)']],
+					'Docker/Kubernetes'],
 				datasets: [{
 					backgroundColor: 'rgb(0, 152, 204)',
-					data: [3, 3, 3, 3, 2, 3, 2, 2]
+					data: [3, 3, 3, 3, 3, 3, 3, 2]
 				}],
 			},
 			
