@@ -9,7 +9,7 @@ $("#banner-div").ready(function() {
 	  onComplete: (self) => {
 	  	$(".typed-cursor").css("color", "black");
 	  	var banner_typing_options = {
-			  strings: ["^300I love space, software, and design."],
+			  strings: ["^300I love software, space, and design."],
 			  typeSpeed: 40,
 			  showCursor: true,
 			  onComplete: (self) => {
