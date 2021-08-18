@@ -26,9 +26,9 @@ $("#banner-div").ready(function() {
 	// Custom JS
 
 	// enable tooltips
-	$(function () {
-		$('[data-toggle="tooltip"]').tooltip()
-	})
+	// $(function () {
+	// 	$('[data-toggle="tooltip"]').tooltip()
+	// })
 	
 
 	if (window.location.pathname == '/') {
