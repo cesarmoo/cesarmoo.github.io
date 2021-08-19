@@ -1,7 +1,6 @@
 // banner typing
 // handle the typing text and showing the down caret
 $("#banner-div").ready(function() {
-	console.log("12");
 	var banner_typing_options = {
 	  strings: ["Hi, I'm Cesar!"],
 	  typeSpeed: 40,
