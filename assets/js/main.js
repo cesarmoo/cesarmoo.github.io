@@ -37,80 +37,213 @@ $("#banner-div").ready(function() {
 
 		// Technical skills chart
 		var ctx = document.getElementById('skills-chart').getContext('2d');
-		var chart = new Chart(ctx, {
-			// The type of chart we want to create
-			type: 'bar',
 
-			// The data for our dataset
-			data: {
-				labels: ['C/C++', 'Python',
-					['Algorithms &', 'Data structures'],
-					'Git', 'Databases/SQL',
-					['Web development', '(Full stack)'],
-					'API development',
-					'Docker/Kubernetes'],
-				datasets: [{
-					backgroundColor: 'rgb(0, 152, 204)',
-					data: [3, 3, 3, 3, 3, 3, 3, 2]
-				}],
-			},
-			
-			// Configuration options go here
-			options: {
-				legend: {
-					display: false
-				},
-				scales: {
-					yAxes: [{
-						ticks: {
-							min: 0,
-							max: 3,
-							autoSkip: false,
-							fontSize: 14,
-							callback: function (label, index, labels) {
-								switch (label) {
-									case 0:
-										return '';
-									case 1:
-										return 'Beginner';
-									case 2:
-										return 'Intermediate';
-									case 3:
-										return 'Advanced';
-								}
-							}
-						},
-						gridLines: {
-							display: false,
-							color: 'gray',
-						},
-					}],
-					xAxes: [{
-						ticks: {
-							autoSkip: false,
-							fontSize: 14,
-						},
-						gridLines: {
-							display: false,
-							color: 'gray',
-						},
-					}]
-				},
-				tooltips: {
-					displayColors: false,
-					callbacks: {
-						label: function (tooltipItem, data) {
-							switch (tooltipItem.index) {
-								case 0:
-									return "3 years";
-								case 1:
-									return "5 years";
-							}
-						}
-					}
+		// Dunning-Kruger graph
+		// credit: http://www.java2s.com/example/javascript/chart.js/chartjs-draw-mathematical-function.html
+		// generating x values with good resolution
+		var labels = Array.from(Array(110).keys());
+		for (var l = 0; l < labels.length; ++l) {
+			labels[l] /= 20;
+		}
+		var data = {
+			labels: labels,
+			datasets: [{
+				function: function (x) { return 1.250555e-12+111.9167*x-119.7083*x*x+44.20833*x*x*x-6.791667*x*x*x*x+0.375*x*x*x*x*x },
+				borderColor: "rgb(0, 152, 204)",
+				data: [],
+				fill: false
+			}]
+		};
+		var point_opts = { // index: [text, align, offset]
+							14: ['"I know everything!"', 280, 5],
+							56: ['"I don\'t know anything."', "bottom", 5],
+							105: ["Googling", 215, 4],
+							92: ["C/C++", 15, 4],
+							88: ["Data Structures\n& Algorithms", 205, 4],
+							84: ["Python", 15, 4],
+							72: ["Databases/SQL", 13, 4],
+							36: ["Web Development", "right", 4],
+							34: ["API Development", "right", 4],
+							24: ["Containerization", "right", 4],
+							
+						 }
+
+		// for data labels; see https://chartjs-plugin-datalabels.netlify.app/
+		Chart.register(ChartDataLabels);
+		Chart.register({
+			id: "dunning",
+			beforeInit: function (chart) {
+				var data = chart.config.data;
+				for (var l = 0; l < data.labels.length; l++) {
+					var fct = data.datasets[0].function,
+						x = data.labels[l],
+						y = fct(x);
+					data.datasets[0].data.push(y);
 				}
 			}
 		});
+
+		var chart = new Chart(ctx, {
+			type: 'line',
+			data: data,
+			options: {
+				scales: {
+					y: {
+						title: {
+							display: true,
+							text: 'Confidence',
+							font: {
+								size: 18,
+								weight: "normal",
+								family: "Source Sans Pro"
+							}
+						},
+						ticks: {
+							display: false
+						},
+						grid: {
+							display: false,
+							borderColor: "gray",
+						},
+						max: 40,
+						min: -15
+					},
+					x: {
+						title: {
+							display: true,
+							text: 'Competence',
+							font: {
+								size: 18,
+								weight: "normal",
+								family: "Source Sans Pro"
+							}
+						},
+						ticks: {
+							display: false
+						},
+						grid: {
+							display: false,
+							borderColor: "gray",
+						}
+					}
+				},
+				plugins: {
+					legend: {
+						display: false
+					},
+					datalabels: {
+						formatter: function (value, context) {
+							return (context.dataIndex in point_opts) ? point_opts[context.dataIndex][0] : "";
+						},
+						align: function (context) {
+							if (context.dataIndex in point_opts) {
+								return point_opts[context.dataIndex][1];
+							}
+						},
+						offset: function (context) {
+							if (context.dataIndex in point_opts) {
+								return point_opts[context.dataIndex][2];
+							}
+						},
+						textAlign: function (context) {
+							return context.dataIndex == 88 ? "right" : "left";
+						},
+						font: {
+							family: "Source Sans Pro",
+							size: 15,
+						}
+					}
+				},
+				elements: {
+					point: {
+						radius: function (context) {
+							return (context.dataIndex in point_opts)
+								&& context.dataIndex != 14 && context.dataIndex != 56
+								? 3 : 0;
+						},
+						backgroundColor: "rgb(0, 152, 204)"
+					}
+				},
+				events: []
+			}
+		});
+		
+
+		// Bar graph for skills
+		// var chart = new Chart(ctx, {
+		// 	// The type of chart we want to create
+		// 	type: 'bar',
+
+		// 	// The data for our dataset
+		// 	data: {
+		// 		labels: ['C/C++', 'Python',
+		// 			['Algorithms &', 'Data structures'],
+		// 			'Git', 'Databases/SQL',
+		// 			['Web development', '(Full stack)'],
+		// 			'API development',
+		// 			'Docker/Kubernetes'],
+		// 		datasets: [{
+		// 			backgroundColor: 'rgb(0, 152, 204)',
+		// 			data: [3, 3, 3, 3, 3, 3, 3, 2]
+		// 		}],
+		// 	},
+			
+		// 	// Configuration options go here
+		// 	options: {
+		// 		legend: {
+		// 			display: false
+		// 		},
+		// 		scales: {
+		// 			yAxes: [{
+		// 				ticks: {
+		// 					min: 0,
+		// 					max: 3,
+		// 					autoSkip: false,
+		// 					fontSize: 14,
+		// 					callback: function (label, index, labels) {
+		// 						switch (label) {
+		// 							case 0:
+		// 								return '';
+		// 							case 1:
+		// 								return 'Beginner';
+		// 							case 2:
+		// 								return 'Intermediate';
+		// 							case 3:
+		// 								return 'Advanced';
+		// 						}
+		// 					}
+		// 				},
+		// 				gridLines: {
+		// 					display: false,
+		// 					color: 'gray',
+		// 				},
+		// 			}],
+		// 			xAxes: [{
+		// 				ticks: {
+		// 					autoSkip: false,
+		// 					fontSize: 14,
+		// 				},
+		// 				gridLines: {
+		// 					display: false,
+		// 					color: 'gray',
+		// 				},
+		// 			}]
+		// 		},
+		// 		tooltips: {
+		// 			displayColors: false,
+		// 			callbacks: {
+		// 				label: function (tooltipItem, data) {
+		// 					switch (tooltipItem.index) {
+		// 						case 0:
+		// 							return "3 years";
+		// 						case 1:
+		// 							return "5 years";
+		// 					}
+		// 				}
+		// 			}
+		// 		}
+		// 	}
+		// });
 	}
 
 	// handle toggling light/dark mode
@@ -165,8 +298,9 @@ $("#banner-div").ready(function() {
 			$exps.css("background-color", "#f8f8f8");
 			$("#experiences .button-no-click").addClass("black");
 			$("hr").css("border-top", "1px solid #ccc");
-			chart.options.scales.yAxes[0].ticks.minor.fontColor = "black";
-			chart.options.scales.xAxes[0].ticks.minor.fontColor = "black";
+			chart.options.scales.y.title.color = "black";
+			chart.options.scales.x.title.color = "black";
+			chart.options.plugins.datalabels.color = "black";
 			chart.update();
 		}
 		else {
@@ -196,8 +330,9 @@ $("#banner-div").ready(function() {
 			$exps.css("background-color", "#292929");
 			$("#experiences .button-no-click").removeClass("black");
 			$("hr").css("border-top", "1px solid gray");
-			chart.options.scales.yAxes[0].ticks.minor.fontColor = "white";
-			chart.options.scales.xAxes[0].ticks.minor.fontColor = "white";
+			chart.options.scales.y.title.color = "white";
+			chart.options.scales.x.title.color = "white";
+			chart.options.plugins.datalabels.color = "white";
 			chart.update();
 		}
 		else {
