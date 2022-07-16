@@ -64,7 +64,7 @@ $("#banner-div").ready(function() {
 							72: ["Databases/SQL", 13, 4],
 							36: ["Web Development", "right", 4],
 							34: ["API Development", "right", 4],
-							24: ["Containerization", "right", 4],
+							24: ["Cloud Computing", "right", 4],
 							
 						 }
 
