@@ -62,7 +62,7 @@ $("#banner-div").ready(function() {
 							72: ["API Development", 20, 4],
 							76: ["Distributed Systems", 20, 4],
 							80: ["Cloud Infrastructure", 200, 4],
-							90: ["C#, C++", 15, 5],
+							84: ["C#, C++", 15, 5],
 							105: ["Learning new things", 215, 4],
 						 }
 
@@ -795,6 +795,7 @@ if (window.location.pathname == '/squotes') {
 
 
 })(jQuery);
+
 
 
 
