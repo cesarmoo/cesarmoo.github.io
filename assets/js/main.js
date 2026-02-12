@@ -55,7 +55,7 @@ $("#banner-div").ready(function() {
 			}]
 		};
 		var point_opts = { // index: [text, align, offset]
-							5: ["Mobile\nDevelopment", "right", 5],
+							3: ["Mobile\nDevelopment", "right", 5],
 							14: ['"I know everything!"', 280, 5],
 							40: ["Web Development", 350, 4],
 							56: ['"I don\'t know anything..."', "bottom", 5],
@@ -795,6 +795,7 @@ if (window.location.pathname == '/squotes') {
 
 
 })(jQuery);
+
 
 
 
