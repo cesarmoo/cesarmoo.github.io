@@ -59,9 +59,9 @@ $("#banner-div").ready(function() {
 							14: ['"I know everything!"', 280, 5],
 							40: ["Web Development", 350, 4],
 							56: ['"I don\'t know anything..."', "bottom", 5],
-							72: ["API Development", 45, 5],
-							76: ["Distributed Systems", 45, 5],
-							80: ["Cloud Infrastructure", 225, 5],
+							72: ["API Development", 20, 4],
+							76: ["Distributed Systems", 20, 4],
+							80: ["Cloud Infrastructure", 200, 4],
 							90: ["C#, C++", 15, 5],
 							105: ["Learning new things", 215, 4],
 						 }
@@ -795,6 +795,7 @@ if (window.location.pathname == '/squotes') {
 
 
 })(jQuery);
+
 
 
 
