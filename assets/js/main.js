@@ -55,14 +55,14 @@ $("#banner-div").ready(function() {
 			}]
 		};
 		var point_opts = { // index: [text, align, offset]
-							5: ["Mobile Development", "right", 4],
+							5: ["Mobile\nDevelopment", "right", 4],
 							14: ['"I know everything! :D"', 280, 5],
 							40: ["Web Development", "right", 4],
 							56: ['"I don\'t know anything :("', "bottom", 5],
-							62: ["API Development", "right", 4],
+							68: ["API Development", "right", 4],
 							72: ["Distributed Systems", 13, 4],
-							88: ["Cloud Infrastructure", 205, 4],
-							92: ["C#, C++", 15, 4],
+							80: ["Cloud Infrastructure", 205, 4],
+							90: ["C#, C++", 15, 4],
 							105: ["Learning new things", 215, 4],
 						 }
 
@@ -795,3 +795,4 @@ if (window.location.pathname == '/squotes') {
 
 
 })(jQuery);
+
